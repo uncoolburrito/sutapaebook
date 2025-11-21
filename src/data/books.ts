@@ -74,7 +74,7 @@ export const books: Book[] = [
         description: "Investigates the limits and scope of metaphysics, combining empiricism and rationalism.",
         tags: ["Philosophy", "Epistemology"],
         slug: "critique-of-pure-reason",
-        totalChapters: 2,
+        totalChapters: 10,
         coverImage: "/covers/critique.png",
     },
 ];

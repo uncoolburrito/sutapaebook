@@ -1,4 +1,5 @@
 import { books } from "@/data/books";
+import { bookContent } from "@/data/book-content";
 import { notFound, redirect } from "next/navigation";
 import { Header } from "@/components/layout/header";
 import { GlassPanel } from "@/components/ui/glass-panel";
@@ -49,22 +50,13 @@ export default async function ReaderPage({ params }: PageProps) {
                     {/* Content Area */}
                     <GlassPanel intensity="low" className="p-8 md:p-12 min-h-[60vh]">
                         <h1 className="text-3xl font-serif font-bold mb-8 text-foreground">
-                            Chapter {chapterIndex}
+                            {bookContent[slug]?.[chapterIndex]?.title || `Chapter ${chapterIndex}`}
                         </h1>
 
-                        <div className="prose prose-lg dark:prose-invert max-w-none font-serif leading-relaxed text-foreground/90">
-                            <p>
-                                eta hochhe placeholder text, bujhli? <strong>{book.title}</strong>, Chapter {chapterIndex}.
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                            <p>
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                            <p>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                            </p>
+                        <div className="prose prose-lg dark:prose-invert max-w-none font-serif leading-relaxed text-foreground/90 whitespace-pre-line">
+                            {bookContent[slug]?.[chapterIndex]?.content || (
+                                <p>Content not available for this chapter.</p>
+                            )}
                         </div>
                     </GlassPanel>
 
