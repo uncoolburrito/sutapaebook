@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { books } from "@/data/books";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export default async function Home({
   searchParams,
@@ -62,9 +63,15 @@ export default async function Home({
               <Link key={book.id} href={`/books/${book.slug}`} className="group">
                 <Card className="h-full flex flex-col gap-4 transition-transform duration-300 group-hover:-translate-y-1">
                   <div
-                    className={`h-48 rounded-2xl bg-gradient-to-br ${book.coverColor} flex items-center justify-center shadow-inner`}
+                    className={`h-48 relative rounded-2xl overflow-hidden shadow-inner`}
                   >
-                    <span className="text-4xl opacity-20">📚</span>
+                    <Image
+                      src={book.coverImage}
+                      alt={book.title}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-br ${book.coverColor} opacity-20 mix-blend-overlay`} />
                   </div>
                   <div className="space-y-2">
                     <h3 className="text-xl font-semibold tracking-tight group-hover:text-primary transition-colors">

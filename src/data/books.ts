@@ -7,6 +7,7 @@ export interface Book {
     tags: string[];
     slug: string;
     totalChapters: number;
+    coverImage: string;
 }
 
 export const books: Book[] = [
@@ -19,6 +20,7 @@ export const books: Book[] = [
         tags: ["Philosophy", "Stoicism", "Classic"],
         slug: "meditations",
         totalChapters: 12,
+        coverImage: "https://images.unsplash.com/photo-1528701202755-cf9158699a2e?auto=format&fit=crop&w=600&q=80",
     },
     {
         id: "2",
@@ -29,6 +31,7 @@ export const books: Book[] = [
         tags: ["Philosophy", "Politics", "Classic"],
         slug: "the-republic",
         totalChapters: 10,
+        coverImage: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80",
     },
     {
         id: "3",
@@ -39,6 +42,7 @@ export const books: Book[] = [
         tags: ["Philosophy", "Stoicism", "Letters"],
         slug: "letters-from-a-stoic",
         totalChapters: 124,
+        coverImage: "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?auto=format&fit=crop&w=600&q=80",
     },
     {
         id: "4",
@@ -49,6 +53,7 @@ export const books: Book[] = [
         tags: ["Philosophy", "Existentialism"],
         slug: "beyond-good-and-evil",
         totalChapters: 9,
+        coverImage: "https://images.unsplash.com/photo-1555449372-5063875f6956?auto=format&fit=crop&w=600&q=80",
     },
     {
         id: "5",
@@ -59,6 +64,7 @@ export const books: Book[] = [
         tags: ["Philosophy", "Ethics", "Classic"],
         slug: "nicomachean-ethics",
         totalChapters: 10,
+        coverImage: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=600&q=80",
     },
     {
         id: "6",
@@ -69,5 +75,6 @@ export const books: Book[] = [
         tags: ["Philosophy", "Epistemology"],
         slug: "critique-of-pure-reason",
         totalChapters: 2,
+        coverImage: "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=600&q=80",
     },
 ];

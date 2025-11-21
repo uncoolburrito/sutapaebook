@@ -1,11 +1,12 @@
 import { books } from "@/data/books";
 import { notFound } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { GlassPanel } from "@/components/ui/glass-panel";
 import { Button } from "@/components/ui/button";
 import { Tag } from "@/components/ui/tag";
-import Link from "next/link";
 import { ArrowLeft, BookOpen, PlayCircle } from "lucide-react";
 
 interface PageProps {
@@ -40,9 +41,16 @@ export default async function BookPage({ params }: PageProps) {
                     <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-8 md:gap-12">
                         {/* Cover Image Area */}
                         <div className="space-y-6">
-                            <GlassPanel intensity="low" className={`aspect-[2/3] rounded-2xl bg-gradient-to-br ${book.coverColor} flex items-center justify-center shadow-2xl`}>
-                                <span className="text-8xl opacity-20">📚</span>
-                            </GlassPanel>
+                            <div className="relative aspect-[2/3] rounded-lg overflow-hidden shadow-2xl">
+                                <Image
+                                    src={book.coverImage}
+                                    alt={book.title}
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
+                                <div className={`absolute inset-0 bg-gradient-to-br ${book.coverColor} opacity-20 mix-blend-overlay`} />
+                            </div>
                             <div className="flex flex-col gap-3">
                                 <Button className="w-full" size="lg" asChild>
                                     <Link href={`/read/${book.slug}/1`}>
