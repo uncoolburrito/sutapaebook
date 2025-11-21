@@ -53,7 +53,7 @@ export const books: Book[] = [
         tags: ["Philosophy", "Existentialism"],
         slug: "beyond-good-and-evil",
         totalChapters: 9,
-        coverImage: "/covers/meditations.png",
+        coverImage: "/covers/beyond-good-and-evil.png",
     },
     {
         id: "5",
@@ -64,7 +64,7 @@ export const books: Book[] = [
         tags: ["Philosophy", "Ethics", "Classic"],
         slug: "nicomachean-ethics",
         totalChapters: 10,
-        coverImage: "/covers/meditations.png",
+        coverImage: "/covers/ethics.png",
     },
     {
         id: "6",
@@ -75,6 +75,6 @@ export const books: Book[] = [
         tags: ["Philosophy", "Epistemology"],
         slug: "critique-of-pure-reason",
         totalChapters: 2,
-        coverImage: "/covers/meditations.png",
+        coverImage: "/covers/critique.png",
     },
 ];
