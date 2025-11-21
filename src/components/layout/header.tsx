@@ -28,7 +28,7 @@ export function Header() {
                     >
                         <BookOpen className="h-5 w-5 text-primary group-hover:text-accent transition-colors" />
                         <span className="font-semibold tracking-tight hidden sm:inline-block">
-                            Wisdom Library
+                            Sutapa's Ebook
                         </span>
                     </GlassPanel>
                 </Link>

@@ -45,7 +45,7 @@ export default async function Home({
               </Tag>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground drop-shadow-sm">
-              Sutapa's wisdom <span className="text-primary">Library</span>
+              Sutapa's <span className="text-primary">Ebook</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               A curated collection of timeless wisdom, presented in a calm,

@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Soft Glass Library",
+  title: "Sutapa's Ebook",
   description: "A beautiful ebook library",
 };
 
