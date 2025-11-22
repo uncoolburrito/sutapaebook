@@ -35,23 +35,23 @@ export function Header() {
 
                 <div className="flex items-center gap-2">
                     {!isReader && (
-                        <nav className="hidden md:flex items-center gap-2 mr-2">
+                        <nav className="flex items-center gap-2 mr-2">
                             {user ? (
-                                <div className="flex items-center gap-4">
-                                    <span className="text-sm font-medium text-muted-foreground">
+                                <div className="flex items-center gap-2 md:gap-4">
+                                    <span className="text-sm font-medium text-muted-foreground hidden md:inline-block">
                                         Hi, {user.name}
                                     </span>
-                                    <Button variant="ghost" size="sm" onClick={logout} className="h-8">
-                                        <LogOut className="mr-2 h-4 w-4" />
-                                        Logout
+                                    <Button variant="ghost" size="sm" onClick={logout} className="h-8 px-2 md:px-3">
+                                        <LogOut className="h-4 w-4 md:mr-2" />
+                                        <span className="hidden md:inline">Logout</span>
                                     </Button>
                                 </div>
                             ) : (
                                 <div className="flex items-center gap-2">
-                                    <Button variant="ghost" size="sm" asChild>
+                                    <Button variant="ghost" size="sm" asChild className="px-2 md:px-4">
                                         <Link href="/login">Login</Link>
                                     </Button>
-                                    <Button variant="default" size="sm" asChild>
+                                    <Button variant="default" size="sm" asChild className="px-2 md:px-4">
                                         <Link href="/register">Register</Link>
                                     </Button>
                                 </div>
